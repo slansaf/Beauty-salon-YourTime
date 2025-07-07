@@ -1,0 +1,1 @@
+<button class="products-slider__button" type="{{ $type }}" onclick="{{ $type === 'submit' ? '' : "location.href='$action'" }}">{{ $title }}</button>
