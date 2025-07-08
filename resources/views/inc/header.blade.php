@@ -46,9 +46,9 @@
 			</div>
 			<div class="header__links">
 				<img src="./img/logo-menu.png" class="header__img" alt="Логотип меню" />
-				<a href="/" class="header__link">Главная</a>
-				<a href="/services" class="header__link">Услуги</a>
-				<a href="/contacts" class="header__link">Контакты</a>
+				<a href="{{ route('home') }}" class="header__link">Главная</a>
+				<a href="{{ route('services') }}" class="header__link">Услуги</a>
+				<a href="{{ route('contacts') }}" class="header__link">Контакты</a>
 			</div>
 		</div>
 	</header>

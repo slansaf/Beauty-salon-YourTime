@@ -3,7 +3,7 @@
 @section('title-main')Наши контакты@endsection
 
 @section('content')
-    <section class="contacts center">
+	<section class="contacts center">
 		<div class="contacts__left">
 			<h2 class="contacts__title">Контакты</h2>
 			<div class="contacts__info">

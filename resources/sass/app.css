@@ -125,12 +125,6 @@ body {
   color: #67473b;
 }
 
-.hero {
-  height: 582px;
-  background: url("/public/img/main-img.jpg") no-repeat;
-  background-position: center;
-}
-
 .hero__title {
   color: white;
   font-family: ClassicaOne;
@@ -154,7 +148,6 @@ body {
 
 .discount {
   margin-top: 42px;
-  margin-bottom: 42px;
 }
 
 .discount__title {
@@ -201,6 +194,7 @@ body {
 }
 
 .services {
+  margin-top: 42px;
   margin-bottom: 60px;
 }
 
@@ -233,6 +227,11 @@ body {
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
+  display: block;
+}
+
+.service__name:hover {
+  color: #e00e0e;
 }
 
 .service__image {
@@ -585,6 +584,74 @@ body {
 
 .footer__img {
   width: 300px;
+}
+
+.bookings {
+  margin: 60px 0 60px 0;
+}
+
+.bookings__title {
+  color: #67473b;
+  font-family: KudryashevDisplay;
+  font-size: 48px;
+  line-height: 93.9%;
+  text-align: left;
+  padding-bottom: 37px;
+}
+
+.bookings__form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bookings__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.bookings__input, .bookings__select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.bookings__input:focus, .bookings__select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.bookings__button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bookings__button:hover {
+  background-color: #0056b3;
+}
+
+.bookings__success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 736px) and (max-width: 991px) {

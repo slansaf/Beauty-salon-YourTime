@@ -1,15 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/services', function () {
     return view('services');
-});
+})->name('services');
+
+// Route::get('/service', function () {
+//     return view('service');
+// })->name('service');
 
 Route::get('/contacts', function () {
     return view('contacts');
-});
+})->name('contacts');
+
+Route::get('/service', [BookingController::class, 'create'])->name('service');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <section class="hero center">
+    <section class="hero center" style="background: url('img/main-img.jpg') no-repeat; height: 582px; width: 100%;  background-position: center;">
 		<h1 class="hero__title">
 			Любите себя! <br />
 			Осталное наша работа
@@ -18,14 +18,14 @@
             ] as $icon)
                 <x-icon :name="$icon['name']" :url="$icon['url']" />
             @endforeach
-	
-		</div>
+        </div>
 	</section>
 
 	<section class="discount center">
 		<div class="discount__content">
 			<h2 class="discount__title">Скидка 20% на первое посещение</h2>
 			<form class="discount__form" action="" method="post" name="discount">
+                @csrf
 				<div class="discount__name">
 					<input class="discount__text" type="text" value="Имя" name="firstname" />
 					<input class="discount__text" type="text" value="Телефон" name="phone" />
@@ -34,31 +34,8 @@
 			</form>
 		</div>
 	</section>
-
-	<section class="services center">
-		<h2 class="services__title">
-			Услуги <br />
-			и цены
-		</h2>
-		<div class="services__grid">
-			<div class="service__item">
-				<img src="./img/services_item1.png" alt="Услуга 1" class="service__image" />
-				<h3 class="service__name">Парикмахерские услуги</h3>
-			</div>
-			<div class="service__item">
-				<img src="./img/services_item2.png" alt="Услуга 1" class="service__image" />
-				<h3 class="service__name">Nail bar</h3>
-			</div>
-			<div class="service__item">
-				<img src="./img/services_item3.png" alt="Услуга 1" class="service__image" />
-				<h3 class="service__name">Brow bar / Макияж</h3>
-			</div>
-			<div class="service__item">
-				<img src="./img/services_item4.png" alt="Услуга 1" class="service__image" />
-				<h3 class="service__name">Эпиляция / Депиляция</h3>
-			</div>
-		</div>
-	</section>
+    
+    <x-services-block />
 
 	<section class="interior center">
 		<h2 class="interior__title">
