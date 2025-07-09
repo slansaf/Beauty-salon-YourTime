@@ -167,7 +167,7 @@ body {
 }
 
 .discount__name {
-  color: #cecece;
+  color: #67473b;
   font-size: 15px;
   font-weight: 400;
   line-height: 115.9%;
@@ -178,6 +178,20 @@ body {
 
 .discount__text {
   border-bottom: 1px solid #000;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.discount__text::placeholder {
+  color: #212529;
+  opacity: 0.4;
+}
+
+.discount__text:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
 }
 
 .discount__button {

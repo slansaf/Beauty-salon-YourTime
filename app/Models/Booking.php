@@ -14,5 +14,6 @@ class Booking extends Model
         'user_name',
         'user_phone',
         'appointment_time',
+        'discount',
     ];
 }

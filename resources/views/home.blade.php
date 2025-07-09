@@ -22,18 +22,20 @@
 	</section>
 
 	<section class="discount center">
-		<div class="discount__content">
-			<h2 class="discount__title">Скидка 20% на первое посещение</h2>
-			<form class="discount__form" action="" method="post" name="discount">
-                @csrf
-				<div class="discount__name">
-					<input class="discount__text" type="text" value="Имя" name="firstname" />
-					<input class="discount__text" type="text" value="Телефон" name="phone" />
-				</div>
-                <x-button title="Получить скидку" action="/submit"  type="submit" />
-			</form>
-		</div>
+    	<div class="discount__content">
+    	    <h2 class="discount__title">Скидка 20% на первое посещение</h2>
+    	    <form class="discount__form" action="{{ route('bookings.create.post') }}" method="post" name="discount" id="discountForm">
+    	        @csrf
+    	        <div class="discount__name">
+    	            <input class="discount__text" type="text" placeholder="Имя" name="firstname" id="discountName" />
+    	            <input class="discount__text" type="text" placeholder="Телефон" name="phone" id="discountPhone" />
+    	        </div>
+				<input type="hidden" name="discount" value="20">
+    	        <x-button title="Получить скидку" action="/submit" type="submit" />
+    	    </form>
+    	</div>
 	</section>
+
     
     <x-services-block />
 

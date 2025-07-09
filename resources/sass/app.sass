@@ -130,7 +130,7 @@ body
       gap: 28px
       padding-top: 19px
    &__name
-      color: rgb(206, 206, 206)
+      color: $colorSelectSite
       font-size: 15px
       font-weight: 400
       line-height: 115.9%
@@ -140,6 +140,17 @@ body
 
    &__text
       border-bottom: 1px solid #000
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+   
+   &__text::placeholder
+      color: #212529
+      opacity: 0.4
+   &__text:focus
+      color: #212529
+      background-color: #fff
+      border-color: #bdbdbd
+      outline: 0
+      box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25)
 
    &__button
       border-radius: 30px

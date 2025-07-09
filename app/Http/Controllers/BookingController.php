@@ -8,10 +8,14 @@ use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    public function create()
-    {
+    public function create(Request $request, $serviceId = null)
+    {   
+        $firstname = $request->input('firstname');
+        $phone = $request->input('phone');
+        $discount = $request->input('discount', 0);
+
         $services = Service::all();
-        return view('service', compact('services'));
+        return view('service', compact('services', 'firstname', 'phone', 'discount', 'serviceId'));
     }
 
     public function store(Request $request)
