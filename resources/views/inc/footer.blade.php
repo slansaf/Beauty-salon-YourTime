@@ -5,7 +5,7 @@
 		</svg>
 	</div>
 	<div class="footer__img">
-		<img src="./img/logo-menu.png" alt="Logo footer" />
+		<img src="{{ asset('img/logo-menu.png') }}" alt="Logo footer" />
 	</div>
 	<div class="footer__line">
 		<svg width="70" height="2" viewBox="0 0 70 2" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -355,7 +355,12 @@ body {
   padding: 6px 5px 18px 11px;
   flex: 0 0 auto;
   width: 250px;
+  height: 390px;
   text-align: center;
+}
+
+.product__image {
+  height: 200px;
 }
 
 .product__price {
@@ -414,11 +419,30 @@ body {
 .masters__list {
   display: flex;
   gap: 20px;
+  position: relative;
 }
 
 .masters__item {
   width: 550px;
   flex: 1;
+}
+
+.masters__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 50px;
+  right: -80px;
+}
+
+.masters__img {
+  width: 50px;
+  height: 60px;
+}
+
+.masters__img:hover path {
+  fill: #929494;
 }
 
 .master__menu {
@@ -437,6 +461,14 @@ body {
 
 .master__link a {
   color: black;
+}
+
+.master__link:hover a {
+  color: #67473b;
+}
+
+.master__link:hover svg {
+  margin-left: 20px;
 }
 
 .master__title {
@@ -723,6 +755,10 @@ body {
     width: 100%;
     max-width: 400px;
   }
+  .masters__buttons {
+    top: 50px;
+    right: 30px;
+  }
   .master__menu {
     padding-left: 0;
     width: 300px;
@@ -812,6 +848,10 @@ body {
   .masters__item {
     width: 100%;
     min-width: 300px;
+  }
+  .masters__buttons {
+    top: 50px;
+    right: 10px;
   }
   .master__menu {
     padding-left: 0px;

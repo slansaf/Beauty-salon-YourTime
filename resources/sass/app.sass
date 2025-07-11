@@ -280,7 +280,12 @@ body
       padding: 6px 5px 18px 11px
       flex: 0 0 auto
       width: 250px
+      height: 390px
       text-align: center
+      
+   &__image
+      height: 200px
+
    &__price
       color: rgb(0, 0, 0)
       font-size: 20px
@@ -313,7 +318,6 @@ body
    
 .masters-main
    margin-bottom: 100px
-
 .masters
    margin-bottom: 40px
    display: flex
@@ -326,10 +330,22 @@ body
    &__list
       display: flex
       gap: 20px
+      position: relative
    &__item
       width: 550px
       flex: 1
-
+   &__buttons
+      display: flex
+      flex-direction: column
+      gap: 10px
+      position: absolute
+      top: 50px
+      right: -80px
+   &__img
+      width: 50px
+      height: 60px
+      &:hover path
+         fill:#929494
 .master
    &__menu
       padding-left: 175px 
@@ -343,6 +359,10 @@ body
       line-height: 115.9% 
       & a  
          color: rgb(0, 0, 0)
+      &:hover a
+         color: $colorSelectSite
+      &:hover svg
+         margin-left: 20px
    &__title
       color: $colorSelectSite
       font-family: KudryashevDisplay
@@ -571,6 +591,9 @@ body
       &__item
          width: 100%
          max-width: 400px
+      &__buttons
+         top: 50px
+         right: 30px
    .master
       &__menu
          padding-left: 0
@@ -644,6 +667,9 @@ body
       &__item
          width: 100%
          min-width: 300px
+      &__buttons
+         top: 50px
+         right: 10px
    .master
       &__menu
          padding-left: 0px 
@@ -661,6 +687,7 @@ body
          padding: 15px 0 15px 0
          right: 10px
          bottom: 15px
+      
    .contacts
       flex-direction: column
       &__map

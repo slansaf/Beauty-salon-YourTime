@@ -1,6 +1,6 @@
 <header class="header center">
 		<div class="header__logo">
-		    <a href="/"><img class="header__logo" src="./img/logo-main2.png" alt="Логотип" /> </a>
+		    <a href="/"><img class="header__logo" src="{{ asset('img/logo-main2.png') }}" alt="Логотип" /> </a>
 		</div>
 		<div class="header__block">
 			<ul class="header__contacts">
@@ -45,7 +45,7 @@
 				</svg>
 			</div>
 			<div class="header__links">
-				<img src="./img/logo-menu.png" class="header__img" alt="Логотип меню" />
+				<img src="{{ asset('img/logo-menu.png') }}" class="header__img" alt="Логотип меню" />
 				<a href="{{ route('home') }}" class="header__link">Главная</a>
 				<a href="{{ route('services') }}" class="header__link">Услуги</a>
 				<a href="{{ route('contacts') }}" class="header__link">Контакты</a>

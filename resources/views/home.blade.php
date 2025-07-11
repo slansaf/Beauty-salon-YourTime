@@ -61,13 +61,13 @@
 	</section>
 
 	<section class="products-slider center">
-		<h2 class="products-slider__title">
-			Магазин
-			<span class="products-slider__title-signature">(скоро... сайт в разработке)</span>
-		</h2>
-		<div class="products-slider__carousel">
-			<button class="products-slider__btn">
-				<svg width="100" height="100" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+    	<h2 class="products-slider__title">
+        	Магазин
+        	<span class="products-slider__title-signature">(скоро... сайт в разработке)</span>
+    	</h2>
+    	<div class="products-slider__carousel">
+        <button class="products-slider__btn" id="prevBtn">
+            <svg width="100" height="100" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="19.5" cy="19.5" r="19.5" fill="#EFB7B7" />
 					<path
 						d="M23.7792 30C23.6638 30.0002 23.5531 29.9546 23.4714 29.8731L13.9085 20.3102C13.7388 20.1405 13.7388 19.8653 13.9085 19.6956L23.4714 10.1327C23.6382 9.96002 23.9133 9.95526 24.086 10.122C24.2587 10.2888 24.2635 10.564 24.0967 10.7367C24.0932 10.7403 24.0897 10.7438 24.086 10.7473L14.8309 20.0025L24.0869 29.2576C24.2569 29.4271 24.2572 29.7024 24.0877 29.8723C24.0059 29.9542 23.8949 30.0002 23.7792 30Z"
@@ -75,54 +75,25 @@
 					<path
 						d="M23.7792 30C23.6638 30.0002 23.5531 29.9546 23.4714 29.8731L13.9085 20.3102C13.7388 20.1405 13.7388 19.8653 13.9085 19.6956L23.4714 10.1327C23.6382 9.96002 23.9133 9.95526 24.086 10.122C24.2587 10.2888 24.2635 10.564 24.0967 10.7367C24.0932 10.7403 24.0897 10.7438 24.086 10.7473L14.8309 20.0025L24.0869 29.2576C24.2569 29.4271 24.2572 29.7024 24.0877 29.8723C24.0059 29.9542 23.8949 30.0002 23.7792 30Z"
 						fill="black" />
-				</svg>
-			</button>
+			</svg>
+        </button>
 
-			<div class="product">
-				<div class="product__slide">
-					<img src="./img/product1.png" alt="Товар 1" class="product__image" />
-					<p class="product__price">4350 p.</p>
-					<h3 class="product__name">LEONOR GREYL</h3>
-					<p class="product__description">
-						Кондиционер для укладки волос Condition Naturelle
-					</p>
-					<button class="product__button">В корзину</button>
-				</div>
+        <div class="product" id="productContainer">
+           @foreach($products as $product)
+                <div class="product__slide">
+                        <div class="product__item">
+                            <img src="{{ asset($product->image) }}" alt="{{ $product->name }}" class="product__image" />
+                            <p class="product__price">{{ $product->price }} p.</p>
+                            <h3 class="product__name">{{ $product->name }}</h3>
+                            <p class="product__description">{{ $product->description }}</p>
+                            <button class="product__button">В корзину</button>
+                        </div>
+                </div>
+            @endforeach
+        </div>
 
-				<div class="product__slide">
-					<img src="./img/product2.png" alt="Товар 1" class="product__image" />
-					<p class="product__price">4350 p.</p>
-					<h3 class="product__name">LEONOR GREYL</h3>
-					<p class="product__description">
-						Кондиционер для укладки волос Condition Naturelle
-					</p>
-					<button class="product__button">В корзину</button>
-				</div>
-
-				<div class="product__slide">
-					<img src="./img/product3.png" alt="Товар 1" class="product__image" />
-					<p class="product__price">4350 p.</p>
-					<h3 class="product__name">LEONOR GREYL</h3>
-					<p class="product__description">
-						Кондиционер для укладки волос Condition Naturelle
-					</p>
-					<button class="product__button">В корзину</button>
-				</div>
-
-				<div class="product__slide">
-					<img src="./img/product4.png" alt="Товар 1" class="product__image" />
-					<p class="product__price">4350 p.</p>
-					<h3 class="product__name">LEONOR GREYL</h3>
-					<p class="product__description">
-						Кондиционер для укладки волос Condition Naturelle
-					</p>
-					<button class="product__button">В корзину</button>
-                    
-				</div>
-			</div>
-
-			<button class="products-slider__btn">
-				<svg width="100" height="100" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="products-slider__btn" id="nextBtn">
+            <svg width="100" height="100" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<circle cx="19.5" cy="19.5" r="19.5" transform="matrix(-1 0 0 1 39 0)" fill="#EFB7B7" />
 					<path
 						d="M15.2208 30C15.3362 30.0002 15.4469 29.9546 15.5286 29.8731L25.0915 20.3102C25.2612 20.1405 25.2612 19.8653 25.0915 19.6956L15.5286 10.1327C15.3618 9.96002 15.0867 9.95526 14.914 10.122C14.7413 10.2888 14.7365 10.564 14.9033 10.7367C14.9068 10.7403 14.9103 10.7438 14.914 10.7473L24.1691 20.0025L14.9131 29.2576C14.7431 29.4271 14.7428 29.7024 14.9123 29.8723C14.9941 29.9542 15.1051 30.0002 15.2208 30Z"
@@ -130,12 +101,10 @@
 					<path
 						d="M15.2208 30C15.3362 30.0002 15.4469 29.9546 15.5286 29.8731L25.0915 20.3102C25.2612 20.1405 25.2612 19.8653 25.0915 19.6956L15.5286 10.1327C15.3618 9.96002 15.0867 9.95526 14.914 10.122C14.7413 10.2888 14.7365 10.564 14.9033 10.7367C14.9068 10.7403 14.9103 10.7438 14.914 10.7473L24.1691 20.0025L14.9131 29.2576C14.7431 29.4271 14.7428 29.7024 14.9123 29.8723C14.9941 29.9542 15.1051 30.0002 15.2208 30Z"
 						fill="black" />
-				</svg>
-			</button>
-
-
-		</div>
-        <x-button title="Весь каталог" action="/page1" type="button" />
+			</svg>
+        </button>
+    	</div>
+    	<x-button title="Весь каталог" action="/page1" type="button" />
 	</section>
 
 	<section class="masters-main center">
@@ -177,7 +146,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="masters__list">
+			<article class="masters__list">
 				<img src="img/master1.png" alt="Мастер 1" class="master__image" />
 				<div class="masters__item">
 					<h3 class="master__name">Айшат Бекова</h3>
@@ -194,12 +163,25 @@
 						настроено позитивно
 					</p>
 				</div>
-			</div>
+				<div class="masters__buttons">
+					<button class="masters__img">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+							<path d="M51.6,97.1V9.5l7.6,7.7c1,1,2.6,1,3.5,0l0,0c1-1,1-2.6,0-3.5l-13-12.9c-0.4-0.4-1-0.4-1.4,0l-13,12.9c-1,1-1,2.6,0,3.5l0,0 c1,1,2.6,1,3.5,0l7.6-7.7v87.6c0,1.4,1.1,2.5,2.5,2.5l0,0C50.5,99.6,51.6,98.5,51.6,97.1z"/>
+						</svg>
+					</button>
+					<button class="masters__img">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g xmlns="http://www.w3.org/2000/svg" transform="matrix(-1 0 0 -1 100 100)">
+							<path d="M51.6,97.1V9.5l7.6,7.7c1,1,2.6,1,3.5,0l0,0c1-1,1-2.6,0-3.5l-13-12.9c-0.4-0.4-1-0.4-1.4,0l-13,12.9c-1,1-1,2.6,0,3.5l0,0  c1,1,2.6,1,3.5,0l7.6-7.7v87.6c0,1.4,1.1,2.5,2.5,2.5l0,0C50.5,99.6,51.6,98.5,51.6,97.1z" /></g>
+						</svg>
+					</button>
+				</div>
+			
+			</article>
 		</div>
-
-        <x-button title="Онлайн запись" action="/page1" type="button" />
+			<x-button title="Онлайн запись" action="{{ route('bookings.create') }}" type="button" />
+		
 	</section>
-
+		
 	<section class="reviews center">
 		<div id="myModal" class="reviews__main hidden">
 			<botton class="reviews__close">&times;</botton>
