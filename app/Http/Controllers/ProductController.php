@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index(Request $reques)
-    {
-        $products = Product::all();
-        return view('home', compact('products'));
-    }
+	public function index(Request $reques)
+	{
+		$products = Product::orderBy("created_at", "DESC")->limit(4)->get;
+		return view('home', compact('products'));
+	}
 }
