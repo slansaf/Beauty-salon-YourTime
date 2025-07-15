@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -25,4 +26,5 @@ Route::post('/service', [BookingController::class, 'create'])->name('bookings.cr
 Route::get('/service/{serviceId?}', [BookingController::class, 'create'])->name('bookings.create');
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 
-Route::get('/', [ProductController::class, 'index'])->name('home');
+// Route::get('/', [ProductController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');

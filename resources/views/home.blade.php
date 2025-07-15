@@ -27,16 +27,15 @@
     	    <form class="discount__form" action="{{ route('bookings.create.post') }}" method="post" name="discount" id="discountForm">
     	        @csrf
     	        <div class="discount__name">
-    	            <input class="discount__text" type="text" placeholder="Имя" name="firstname" id="discountName" />
-    	            <input class="discount__text" type="text" placeholder="Телефон" name="phone" id="discountPhone" />
+    	            <input class="discount__text" type="text" placeholder="Имя" name="firstname" id="discountName" required/>
+    	            <input class="discount__text" type="text" placeholder="Телефон" name="phone" id="discountPhone" required/>
     	        </div>
 				<input type="hidden" name="discount" value="20">
     	        <x-button title="Получить скидку" action="/submit" type="submit" />
     	    </form>
     	</div>
 	</section>
-
-    
+   
     <x-services-block />
 
 	<section class="interior center">
