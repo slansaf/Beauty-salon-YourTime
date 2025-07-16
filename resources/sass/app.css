@@ -125,6 +125,11 @@ body {
   color: #67473b;
 }
 
+.hero {
+  width: 100%;
+  height: 582px;
+}
+
 .hero__title {
   color: white;
   font-family: ClassicaOne;

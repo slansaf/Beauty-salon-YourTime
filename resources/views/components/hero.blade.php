@@ -1,4 +1,4 @@
- <section class="hero center" style="background: url('{{ $urlimg }}') no-repeat; height: 582px; width: 100%;  background-position: center;">
+ <section class="hero center" style="background: url('{{ $urlimg }}') no-repeat;  background-size: cover; background-position: center;">
  	<h1 class="hero__title">
 		{!!$title!!}
  	</h1>

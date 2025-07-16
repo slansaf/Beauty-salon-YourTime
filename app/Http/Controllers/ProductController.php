@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
 	public function index(Request $reques)
 	{
-		$products = Product::orderBy("created_at", "DESC")->limit(4)->get;
+		$products = Product::orderBy("created_at", "DESC")->limit(3)->get();
 		return view('home', compact('products'));
 	}
 }
