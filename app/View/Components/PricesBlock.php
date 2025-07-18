@@ -14,9 +14,10 @@ class PricesBlock extends Component
      */
     public $prices;
 
-    public function __construct()
+    public function __construct($prices = null)
     {
-        $this->prices = Prices::all();
+        $this->prices = $prices;
+   
     }
 
     /**

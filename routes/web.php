@@ -4,18 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesController;
 
 // Route::get('/', function () {
 //     return view('home');
 // })->name('home');
 
-Route::get('/services', function () {
-    return view('services');
-})->name('services');
+// Route::get('/services', function () {
+//     return view('services');
+// })->name('services');
 
-// Route::get('/service', function () {
-//     return view('service');
-// })->name('service');
+Route::get('/services/{servicesId?}', [ServicesController::class, 'viewPrice'])->name('services');
 
 Route::get('/contacts', function () {
     return view('contacts');

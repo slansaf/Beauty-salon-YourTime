@@ -7,7 +7,7 @@
         @foreach ($services as $service)
             <div class="service__item">
                 <img src="{{ asset($service->image) }}" alt="{{ $service->title }}" class="service__image" />
-                <a href="{{ route('bookings.create', $service->id) }}" class="service__name">{{ $service->title }}</a>
+                <a href="{{ route('services', $service->id) }}" class="service__name">{{ $service->title }}</a>
             </div>
         @endforeach
     </div>
